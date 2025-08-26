@@ -27,9 +27,9 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #58a6ff;
+      color: #39ff14; /* verde hacker */
       overflow: hidden;
-      border-right: 2px solid #58a6ff;
+      border-right: 2px solid #39ff14;
       white-space: nowrap;
       width: 20ch;
       margin: 0 auto;
@@ -61,7 +61,7 @@
       transition: 0.3s;
     }
 
-    nav a:hover { color: #58a6ff; }
+    nav a:hover { color: #39ff14; }
 
     /* ===== Sections ===== */
     section {
@@ -76,17 +76,39 @@
     section.show { opacity: 1; transform: translateY(0); }
 
     h2 {
-      border-left: 4px solid #58a6ff;
+      border-left: 4px solid #39ff14;
       padding-left: 0.5rem;
-      color: #58a6ff;
+      color: #39ff14;
       margin-bottom: 1rem;
     }
 
-    ul { list-style: none; padding: 0; }
-    li::before {
-      content: '▹';
-      color: #58a6ff;
-      margin-right: 0.5rem;
+    /* ===== Skills Grid ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #30363d;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.05);
+      border-color: #39ff14;
+      box-shadow: 0 8px 15px rgba(57,255,20,0.3);
     }
 
     /* ===== Projects ===== */
@@ -107,13 +129,19 @@
       overflow: hidden;
     }
 
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
     .card::before {
       content: '';
       position: absolute;
       top: 0; left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(120deg, rgba(88,166,255,0.2), rgba(88,166,255,0.4), rgba(88,166,255,0.2));
+      background: linear-gradient(120deg, rgba(57,255,20,0.2), rgba(57,255,20,0.4), rgba(57,255,20,0.2));
       transition: 0.5s;
     }
 
@@ -121,8 +149,8 @@
 
     .card:hover {
       transform: translateY(-10px) scale(1.03);
-      border-color: #58a6ff;
-      box-shadow: 0 10px 20px rgba(88,166,255,0.3);
+      border-color: #39ff14;
+      box-shadow: 0 10px 20px rgba(57,255,20,0.3);
     }
 
     /* ===== Buttons ===== */
@@ -130,9 +158,9 @@
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1.2rem;
-      border: 2px solid #58a6ff;
+      border: 2px solid #39ff14;
       border-radius: 8px;
-      color: #58a6ff;
+      color: #39ff14;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.4s ease;
@@ -146,7 +174,7 @@
       top: 0; left: -100%;
       width: 100%;
       height: 100%;
-      background: #58a6ff;
+      background: #39ff14;
       transition: 0.4s;
       z-index: 0;
     }
@@ -165,22 +193,6 @@
     /* ===== Animaciones ===== */
     @keyframes typing { from { width: 0 } to { width: 20ch } }
     @keyframes blink { 50% { border-color: transparent } }
-
-    /* ===== Skills Bars ===== */
-    .skill-bar {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 0.5rem 0 1rem;
-    }
-
-    .skill-bar div {
-      height: 1rem;
-      background: #58a6ff;
-      width: 0;
-      transition: width 1.5s ease-in-out;
-    }
   </style>
 </head>
 <body>
@@ -204,54 +216,87 @@
 
   <section id="skills">
     <h2>Competencias técnicas</h2>
-    <p>Mis habilidades principales:</p>
-    <div class="skill-bar"><div style="width: 90%;"></div></div> Windows & Linux Server Administration
-    <div class="skill-bar"><div style="width: 85%;"></div></div> Active Directory & GPO
-    <div class="skill-bar"><div style="width: 80%;"></div></div> Azure | VMware | Hyper-V
-    <div class="skill-bar"><div style="width: 75%;"></div></div> VPN, VLANs, Firewalls
-    <div class="skill-bar"><div style="width: 70%;"></div></div> SIEM & Monitorización
-    <div class="skill-bar"><div style="width: 85%;"></div></div> Servidores de correo
-    <div class="skill-bar"><div style="width: 80%;"></div></div> Bases de datos
-    <div class="skill-bar"><div style="width: 75%;"></div></div> Scripting
-    <div class="skill-bar"><div style="width: 70%;"></div></div> Hardening y gestión de vulnerabilidades
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux" />
+        <p>Linux Server Administration</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2021.svg" alt="Windows" />
+        <p>Windows Server Administration</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Microsoft_Azure_Logo.svg" alt="Azure" />
+        <p>Azure & Cloud</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Burp_Suite_Logo.png" alt="Burp Suite" />
+        <p>Burp Suite & Web Security</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" />
+        <p>Python & Scripting</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/SQL_Server_Logo.svg" alt="SQL Server" />
+        <p>Bases de datos</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Firewall_Icon.svg" alt="Firewall" />
+        <p>Firewall & VPN</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Wazuh_logo.svg" alt="SIEM" />
+        <p>SIEM & Monitorización</p>
+      </div>
+    </div>
   </section>
 
   <section id="proyectos">
     <h2>Proyectos</h2>
     <div class="projects">
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux Lab">
         <h3>🔐 Laboratorio Advanced AD</h3>
         <p>Simulación de ataques internos a Active Directory: kerberoasting, pass-the-hash y escalada de privilegios.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Burp_Suite_Logo.png" alt="Burp Suite">
         <h3>💻 Web App Hacking con Burp Suite</h3>
         <p>Auditoría de aplicaciones web simuladas. Identificación de vulnerabilidades OWASP Top 10 y explotación controlada.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Kali-Linux-logo.png" alt="Kali Linux">
         <h3>🕵️ Pentesting Lab</h3>
         <p>Pruebas de penetración en entornos Windows y Linux. Escaneo de red, explotación de vulnerabilidades y post-explotación.</p>
       </div>
       <div class="card">
-        <h3>📡 Redes y VLAN Pentesting</h3>
-        <p>Mapeo de redes internas, sniffing, ataques simulados a servicios y detección de brechas de seguridad.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Wazuh_logo.svg" alt="Wazuh">
+        <h3>📊 Monitorización con Wazuh</h3>
+        <p>Implementación de SIEM para detección y respuesta a incidentes, incluyendo alertas y dashboards personalizados.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Firewall_Icon.svg" alt="Firewall">
         <h3>🛡️ Hardening & Defensa</h3>
         <p>Fortificación de servidores Linux y Windows, políticas de contraseñas, firewall, auditorías automáticas y mitigación de exploits.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Ransomware_icon.png" alt="Ransomware Lab">
         <h3>🧟 Simulación de Ransomware</h3>
         <p>Laboratorio controlado de malware para aprender cómo se propaga, encripta y cómo aplicar contramedidas.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Python-logo-notext.svg" alt="Python">
         <h3>🐍 Automatización de Auditorías</h3>
         <p>Scripting en Python y PowerShell para detectar vulnerabilidades y automatizar reportes de seguridad en sistemas y redes.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Red_team_icon.svg" alt="Red Team">
         <h3>🎯 Red Team vs Blue Team</h3>
         <p>Simulación de ataques ofensivos y defensivos en entornos controlados, aprendiendo detección de intrusos y respuesta a incidentes.</p>
       </div>
       <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Honeypot_icon.svg" alt="Honeypot">
         <h3>🎣 Honeypots y Detección de Intrusos</h3>
         <p>Implementación de honeypots para atraer atacantes y analizar técnicas de intrusión en entornos controlados.</p>
       </div>
@@ -267,7 +312,7 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p>📧 <a href="mailto:marcel.espurz@gmail.com">marcel.espurz@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/marcel-espurz-ruzafa-755aba275/">LinkedIn</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/marcels">LinkedIn</a> | <a href="https://github.com/marcelespurz">GitHub</a></p>
   </section>
 
   <footer>
@@ -286,4 +331,3 @@
   </script>
 </body>
 </html>
-
