@@ -85,7 +85,7 @@
     /* ===== Skills Grid ===== */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
@@ -97,12 +97,7 @@
       text-align: center;
       border: 1px solid #30363d;
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skill-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
 
     .skill-card:hover {
@@ -114,7 +109,7 @@
     /* ===== Projects ===== */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
 
@@ -124,33 +119,12 @@
       border-radius: 12px;
       border: 1px solid #30363d;
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
     }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, rgba(88,166,255,0.2), rgba(88,166,255,0.4), rgba(88,166,255,0.2));
-      transition: 0.5s;
-    }
-
-    .card:hover::before { left: 0; }
 
     .card:hover {
-      transform: translateY(-10px) scale(1.03);
+      transform: translateY(-5px);
       border-color: #58a6ff;
-      box-shadow: 0 10px 20px rgba(88,166,255,0.3);
+      box-shadow: 0 8px 15px rgba(88,166,255,0.3);
     }
 
     /* ===== Buttons ===== */
@@ -218,38 +192,14 @@
   <section id="skills">
     <h2>Competencias técnicas</h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux" />
-        <p>Linux Server Administration</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2021.svg" alt="Windows" />
-        <p>Windows Server Administration</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure" />
-        <p>Azure & Cloud</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Burp_Suite_logo.svg" alt="Burp Suite" />
-        <p>Burp Suite & Web Security</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" />
-        <p>Python & Scripting</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Microsoft_SQL_Server_Logo.svg" alt="SQL Server" />
-        <p>Bases de datos</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Firewall_pictogram.svg" alt="Firewall" />
-        <p>Firewall & VPN</p>
-      </div>
-      <div class="skill-card">
-        <img src="https://wazuh.com/uploads/Wazuh-logo-blue.svg" alt="SIEM" />
-        <p>SIEM & Monitorización</p>
-      </div>
+      <div class="skill-card">🐧 Linux Server Administration</div>
+      <div class="skill-card">🪟 Windows Server Administration</div>
+      <div class="skill-card">☁️ Azure & Cloud</div>
+      <div class="skill-card">🕷️ Burp Suite & Web Security</div>
+      <div class="skill-card">🐍 Python & Scripting</div>
+      <div class="skill-card">🗄️ Bases de datos (SQL)</div>
+      <div class="skill-card">🔥 Firewall & VPN</div>
+      <div class="skill-card">📊 SIEM & Monitorización</div>
     </div>
   </section>
 
@@ -258,47 +208,38 @@
     <h2>Proyectos</h2>
     <div class="projects">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux Lab">
         <h3>🔐 Laboratorio Advanced AD</h3>
         <p>Simulación de ataques internos a Active Directory: kerberoasting, pass-the-hash y escalada de privilegios.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Burp_Suite_logo.svg" alt="Burp Suite">
         <h3>💻 Web App Hacking con Burp Suite</h3>
         <p>Auditoría de aplicaciones web simuladas. Identificación de vulnerabilidades OWASP Top 10 y explotación controlada.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" alt="Kali Linux">
         <h3>🕵️ Pentesting Lab</h3>
         <p>Pruebas de penetración en entornos Windows y Linux. Escaneo de red, explotación de vulnerabilidades y post-explotación.</p>
       </div>
       <div class="card">
-        <img src="https://wazuh.com/uploads/Wazuh-logo-blue.svg" alt="Wazuh">
         <h3>📊 Monitorización con Wazuh</h3>
         <p>Implementación de SIEM para detección y respuesta a incidentes, incluyendo alertas y dashboards personalizados.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Firewall_pictogram.svg" alt="Firewall">
         <h3>🛡️ Hardening & Defensa</h3>
         <p>Fortificación de servidores Linux y Windows, políticas de contraseñas, firewall, auditorías automáticas y mitigación de exploits.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Lock_red_icon.svg" alt="Ransomware Lab">
         <h3>🧟 Simulación de Ransomware</h3>
         <p>Laboratorio controlado de malware para aprender cómo se propaga, encripta y cómo aplicar contramedidas.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
         <h3>🐍 Automatización de Auditorías</h3>
         <p>Scripting en Python y PowerShell para detectar vulnerabilidades y automatizar reportes de seguridad en sistemas y redes.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Team_icon_2.svg" alt="Red Team">
         <h3>🎯 Red Team vs Blue Team</h3>
         <p>Simulación de ataques ofensivos y defensivos en entornos controlados, aprendiendo detección de intrusos y respuesta a incidentes.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Honeypot_logo.svg" alt="Honeypot">
         <h3>🎣 Honeypots y Detección de Intrusos</h3>
         <p>Implementación de honeypots para atraer atacantes y analizar técnicas de intrusión en entornos controlados.</p>
       </div>
