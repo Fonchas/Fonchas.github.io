@@ -6,7 +6,6 @@
   <title>Marcel Espurz | Sysadmin & Ciberseguridad</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    /* ===== Base ===== */
     body {
       margin: 0;
       font-family: 'Fira Code', monospace;
@@ -14,10 +13,8 @@
       color: #c9d1d9;
       overflow-x: hidden;
     }
-
     a { text-decoration: none; }
 
-    /* ===== Header ===== */
     header {
       background: #161b22;
       padding: 3rem 1rem;
@@ -27,7 +24,7 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #39ff14; /* verde hacker */
+      color: #39ff14;
       overflow: hidden;
       border-right: 2px solid #39ff14;
       white-space: nowrap;
@@ -42,7 +39,6 @@
       color: #8b949e;
     }
 
-    /* ===== Nav ===== */
     nav {
       background: #161b22;
       display: flex;
@@ -63,7 +59,6 @@
 
     nav a:hover { color: #39ff14; }
 
-    /* ===== Sections ===== */
     section {
       max-width: 900px;
       margin: 3rem auto;
@@ -82,7 +77,6 @@
       margin-bottom: 1rem;
     }
 
-    /* ===== Skills Grid ===== */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -111,7 +105,6 @@
       box-shadow: 0 8px 15px rgba(57,255,20,0.3);
     }
 
-    /* ===== Projects ===== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -153,7 +146,6 @@
       box-shadow: 0 10px 20px rgba(57,255,20,0.3);
     }
 
-    /* ===== Buttons ===== */
     .btn {
       display: inline-block;
       margin-top: 1rem;
@@ -182,7 +174,6 @@
     .btn:hover::after { left: 0; }
     .btn:hover { color: #0d1117; }
 
-    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 2rem;
@@ -190,7 +181,6 @@
       color: #8b949e;
     }
 
-    /* ===== Animaciones ===== */
     @keyframes typing { from { width: 0 } to { width: 20ch } }
     @keyframes blink { 50% { border-color: transparent } }
   </style>
@@ -218,35 +208,35 @@
     <h2>Competencias técnicas</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" alt="Linux" />
         <p>Linux Server Administration</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2021.svg" alt="Windows" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg" alt="Windows" />
         <p>Windows Server Administration</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Microsoft_Azure_Logo.svg" alt="Azure" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftazure.svg" alt="Azure" />
         <p>Azure & Cloud</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Burp_Suite_Logo.png" alt="Burp Suite" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/burpsuite.svg" alt="Burp Suite" />
         <p>Burp Suite & Web Security</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" />
         <p>Python & Scripting</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/SQL_Server_Logo.svg" alt="SQL Server" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftsqlserver.svg" alt="SQL Server" />
         <p>Bases de datos</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Firewall_Icon.svg" alt="Firewall" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cisco.svg" alt="Firewall" />
         <p>Firewall & VPN</p>
       </div>
       <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Wazuh_logo.svg" alt="SIEM" />
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/wazuh.svg" alt="SIEM" />
         <p>SIEM & Monitorización</p>
       </div>
     </div>
@@ -256,49 +246,24 @@
     <h2>Proyectos</h2>
     <div class="projects">
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux Lab">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" alt="Linux Lab">
         <h3>🔐 Laboratorio Advanced AD</h3>
         <p>Simulación de ataques internos a Active Directory: kerberoasting, pass-the-hash y escalada de privilegios.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Burp_Suite_Logo.png" alt="Burp Suite">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/burpsuite.svg" alt="Burp Suite">
         <h3>💻 Web App Hacking con Burp Suite</h3>
         <p>Auditoría de aplicaciones web simuladas. Identificación de vulnerabilidades OWASP Top 10 y explotación controlada.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Kali-Linux-logo.png" alt="Kali Linux">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kalilinux.svg" alt="Kali Linux">
         <h3>🕵️ Pentesting Lab</h3>
         <p>Pruebas de penetración en entornos Windows y Linux. Escaneo de red, explotación de vulnerabilidades y post-explotación.</p>
       </div>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Wazuh_logo.svg" alt="Wazuh">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/wazuh.svg" alt="Wazuh">
         <h3>📊 Monitorización con Wazuh</h3>
         <p>Implementación de SIEM para detección y respuesta a incidentes, incluyendo alertas y dashboards personalizados.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Firewall_Icon.svg" alt="Firewall">
-        <h3>🛡️ Hardening & Defensa</h3>
-        <p>Fortificación de servidores Linux y Windows, políticas de contraseñas, firewall, auditorías automáticas y mitigación de exploits.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Ransomware_icon.png" alt="Ransomware Lab">
-        <h3>🧟 Simulación de Ransomware</h3>
-        <p>Laboratorio controlado de malware para aprender cómo se propaga, encripta y cómo aplicar contramedidas.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Python-logo-notext.svg" alt="Python">
-        <h3>🐍 Automatización de Auditorías</h3>
-        <p>Scripting en Python y PowerShell para detectar vulnerabilidades y automatizar reportes de seguridad en sistemas y redes.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Red_team_icon.svg" alt="Red Team">
-        <h3>🎯 Red Team vs Blue Team</h3>
-        <p>Simulación de ataques ofensivos y defensivos en entornos controlados, aprendiendo detección de intrusos y respuesta a incidentes.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Honeypot_icon.svg" alt="Honeypot">
-        <h3>🎣 Honeypots y Detección de Intrusos</h3>
-        <p>Implementación de honeypots para atraer atacantes y analizar técnicas de intrusión en entornos controlados.</p>
       </div>
     </div>
   </section>
@@ -320,7 +285,6 @@
   </footer>
 
   <script>
-    // Scroll animations
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -331,3 +295,4 @@
   </script>
 </body>
 </html>
+
