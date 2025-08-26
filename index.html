@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcel Espurz | Sysadmin & Ciberseguridad</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    header {
+      background: #161b22;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #30363d;
+    }
+    header h1 {
+      color: #58a6ff;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+    nav {
+      background: #161b22;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 2px solid #30363d;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #c9d1d9;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #58a6ff;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      border-left: 4px solid #58a6ff;
+      padding-left: 0.5rem;
+      color: #58a6ff;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li::before {
+      content: '▹';
+      color: #58a6ff;
+      margin-right: 0.5rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #58a6ff;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 2px solid #30363d;
+      color: #8b949e;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #58a6ff;
+      border-radius: 5px;
+      color: #58a6ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #58a6ff;
+      color: #0d1117;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Marcel Espurz</h1>
+    <p>Administrador de Sistemas & Ciberseguridad Junior</p>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#skills">Competencias</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#cv">Currículum</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy Sysadmin Junior en Grupo Durania con especialización en ciberseguridad, administración de sistemas y entornos cloud. Me apasiona fortalecer infraestructuras IT, implementar buenas prácticas de seguridad y seguir aprendiendo en un sector en constante evolución.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Competencias técnicas</h2>
+    <ul>
+      <li>Windows & Linux Server Administration</li>
+      <li>Active Directory & GPO</li>
+      <li>Azure | VMware | Hyper-V</li>
+      <li>VPN, VLANs, Firewalls</li>
+      <li>SIEM & Monitorización</li>
+      <li>Servidores de correo (Postfix, Dovecot, Exchange)</li>
+      <li>Bases de datos (MySQL, SQL Server)</li>
+      <li>Scripting (PowerShell, Bash, Python)</li>
+      <li>Hardening de sistemas y gestión de vulnerabilidades</li>
+    </ul>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>🔐 Laboratorio Active Directory</h3>
+        <p>Entorno con usuarios, GPOs y políticas de seguridad en Windows Server.</p>
+      </div>
+      <div class="card">
+        <h3>☁️ Servidor de correo seguro</h3>
+        <p>Configuración con Postfix + Dovecot + Roundcube en entorno Linux.</p>
+      </div>
+      <div class="card">
+        <h3>🕵️ Pentesting Lab</h3>
+        <p>Pruebas controladas con Kali Linux y análisis de vulnerabilidades.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Monitorización con Wazuh</h3>
+        <p>Implementación de SIEM para detección y respuesta a incidentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>Currículum</h2>
+    <p>Puedes descargar mi CV en PDF actualizado:</p>
+    <a class="btn" href="Curriculum-Marcel-Espurz.pdf" download>📄 Descargar CV</a>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📧 <a href="mailto:marcel.espurz@gmail.com">marcel.espurz@gmail.com</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/marcels">LinkedIn</a> | <a href="https://github.com/marcelespurz">GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Marcel Espurz | Sysadmin & Ciberseguridad</p>
+  </footer>
+</body>
+</html>
